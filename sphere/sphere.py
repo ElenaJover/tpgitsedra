@@ -16,32 +16,32 @@ class Sphere(object):
     def surface(self):
         # *** STEP 3 ***
         # uncomment the following line
-        #return 4.0 * 3.1416 * self.radius ** 2
+        return 4.0 * math.pi * self.radius ** 2
         pass
 
     def volume(self):
         # *** STEP 4 ***
         # uncomment the following line
-        return 4/3 * 3.1416 * self.radius ** 3
+        return 4/3 * math.pi * self.radius ** 3
         pass
 
     def diameter(self):
         # *** STEP 5 ***
         # uncomment the following line
-        return self.radius
+        return self.radius * 2.0
         pass
 
     def dump(self, filename):
         # *** STEP 6 ***
         # uncomment the 2 following line
-        with open(filename, "w") as f:
-        	pickle.dump(self, f)
+        #with open(filename, "w") as f:
+        #    pickle.dump(self, f)
         pass
 
 def loadSphere(filename):
     # *** STEP 7 ***
     # uncomment the 3 following line
-    #with open(filename, "r") as f:
-    #    sphere = pickle.load(f)
-    #    return sphere
+    with open(filename, "r") as f:
+        sphere = pickle.load(f)
+        return sphere
     pass
